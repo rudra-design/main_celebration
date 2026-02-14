@@ -1,0 +1,124 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  height:100vh;
+  background:linear-gradient(135deg,#ff4e88,#ff9acb,#ffd6ea);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  position:relative;
+}
+
+a {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* removes default blue */
+}
+
+
+/* HERO SECTION */
+.hero{
+  text-align:center;
+  z-index:2;
+}
+
+.main-title{
+  font-size:42px;
+  color:white;
+  text-shadow:0 0 20px #ff0066;
+  animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 15px #ff0066; }
+  to{ text-shadow:0 0 40px #ff99cc; }
+}
+
+.subtitle{
+  margin-top:15px;
+  font-size:18px;
+  color:white;
+  opacity:0.9;
+}
+
+/* BUTTONS */
+.button-container{
+  margin-top:40px;
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  padding:15px 35px;
+  border:none;
+  border-radius:40px;
+  font-size:16px;
+  cursor:pointer;
+  color:white;
+  font-weight:bold;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(45deg,#ff004c,#ff66b2);
+  box-shadow:0 0 20px rgba(255,0,120,0.6);
+  transition:0.4s;
+}
+
+.hero-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 40px rgba(255,0,120,0.9);
+}
+
+/* Floating Balloons */
+.balloon{
+  position:absolute;
+  bottom:-150px;
+  width:40px;
+  height:55px;
+  border-radius:50%;
+  animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+  to{
+      transform:translateY(-120vh);
+  }
+}
+
+/* Ribbons */
+.ribbon{
+  position:absolute;
+  top:-50px;
+  width:8px;
+  height:40px;
+  border-radius:10px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+      transform:translateY(110vh) rotate(360deg);
+  }
+}
+
+/* Sparkles */
+.sparkle{
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:white;
+  border-radius:50%;
+  box-shadow:0 0 10px white;
+  animation:twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle{
+  0%,100%{opacity:0.3;}
+  50%{opacity:1;}
+}
